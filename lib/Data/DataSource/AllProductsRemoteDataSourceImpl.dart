@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:dio/dio.dart';
 import 'package:flutter_task_cycle_one/Data/Api/FakeStoreApi.dart';
+import 'package:flutter_task_cycle_one/Data/Models/ProductResponseDTO.dart';
 import 'package:flutter_task_cycle_one/Domain/DataSource/AllProductsRemoteDataSource.dart';
 import 'package:flutter_task_cycle_one/Domain/Exceptions/DioExceptions.dart';
 import 'package:flutter_task_cycle_one/Domain/Exceptions/TimeOutOperationsException.dart';
@@ -21,7 +22,8 @@ class AllProductsRemoteDataSourceImpl implements AllProductsRemoteDataSource {
   @override
   Future<List<ProductResponse>?> getAllProducts()async{
       try{
-          var response = await apiManager.getAllProducts().timeout(Duration(seconds: 60));
+          var response = await apiManager.getAllProducts().timeout(const Duration(seconds: 60));
+          print("4");
           response!.map((e) => e.toDomain()).toList();
       }on DioException catch(e){
         throw DioServerException(errorMessage: e.type);

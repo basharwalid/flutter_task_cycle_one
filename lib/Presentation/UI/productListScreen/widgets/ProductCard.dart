@@ -27,8 +27,8 @@ class ProductCard extends StatelessWidget {
             child: Column(
               children: [
                 ClipRRect(
+                    borderRadius: BorderRadius.circular(25),
                     child: Image.asset(productImage, fit: BoxFit.fill),
-                  borderRadius: BorderRadius.circular(25),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(10.0),

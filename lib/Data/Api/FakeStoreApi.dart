@@ -26,6 +26,7 @@ class FakeStoreApiManager extends BaseAPIManager<FakeStoreApiAssets> {
     var uri = Uri.https(apiAssets.baseUrl, "/products");
     //get response from the api
     var response = await dio.getUri<List<dynamic>>(uri);
+    print("5");
     //return the response
     return response.data!.map((e) => ProductResponseDTO.fromJson(e)).toList();
   }

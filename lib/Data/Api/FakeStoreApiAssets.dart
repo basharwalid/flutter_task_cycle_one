@@ -10,7 +10,7 @@ class FakeStoreApiAssets extends BaseAPIAssets{
     return _fakeStoreApiAssetsInstance ??= FakeStoreApiAssets._();
   }
 
-  String baseUrl = "fakestoreapi";
+  String baseUrl = "fakestoreapi.com";
 
   String apiProductsPath(String id){
     return "fakestoreapi.com/products";
