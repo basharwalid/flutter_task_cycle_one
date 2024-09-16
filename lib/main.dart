@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_task_cycle_one/Presentation/UI/productListScreen/ProductListView.dart';
+import 'package:flutter_task_cycle_one/Presentation/UI/productListScreen/product_list_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,9 +13,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        ProductListScreen.routeName: (_) => const ProductListScreen(),
+        ProductListView.routeName: (_) => const ProductListView(),
       },
-      initialRoute: ProductListScreen.routeName,
+      initialRoute: ProductListView.routeName,
     );
   }
 }

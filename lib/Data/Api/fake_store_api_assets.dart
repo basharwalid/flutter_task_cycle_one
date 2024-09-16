@@ -1,7 +1,9 @@
-import 'package:flutter_task_cycle_one/Core/BaseApiAssets.dart';
+import 'package:flutter_task_cycle_one/Core/base_api_assets.dart';
 FakeStoreApiAssets injectFakeStoreApiAssets(){
   return FakeStoreApiAssets.getInstance();
 }
+
+
 class FakeStoreApiAssets extends BaseAPIAssets{
   //singleton pattern
   FakeStoreApiAssets._();
@@ -11,8 +13,5 @@ class FakeStoreApiAssets extends BaseAPIAssets{
   }
 
   String baseUrl = "fakestoreapi.com";
-
-  String apiProductsPath(String id){
-    return "fakestoreapi.com/products";
-  }
+  String productPath = "/products";
 }

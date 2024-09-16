@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_task_cycle_one/Core/BaseNavigator.dart';
-import 'package:flutter_task_cycle_one/Core/BaseViewModel.dart';
+import 'package:flutter_task_cycle_one/Core/base_navigator.dart';
+import 'package:flutter_task_cycle_one/Core/base_viewModel.dart';
 
 abstract class BaseState<T extends StatefulWidget, VM extends BaseViewModel>
     extends State<T> implements BaseNavigator {

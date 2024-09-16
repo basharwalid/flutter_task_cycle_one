@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_task_cycle_one/Core/BaseNavigator.dart';
-import 'package:flutter_task_cycle_one/Domain/Exceptions/DioExceptions.dart';
-import 'package:flutter_task_cycle_one/Domain/Exceptions/InternetConnectionException.dart';
-import 'package:flutter_task_cycle_one/Domain/Exceptions/TimeOutOperationsException.dart';
-import 'package:flutter_task_cycle_one/Domain/Exceptions/URLLauncherException.dart';
+import 'package:flutter_task_cycle_one/Core/base_navigator.dart';
+import 'package:flutter_task_cycle_one/Domain/Exceptions/dio_exceptions.dart';
+import 'package:flutter_task_cycle_one/Domain/Exceptions/internet_connection_exception.dart';
+import 'package:flutter_task_cycle_one/Domain/Exceptions/timeout_operations_exception.dart';
+import 'package:flutter_task_cycle_one/Domain/Exceptions/url_launcher_exception.dart';
 
 class BaseViewModel<N extends BaseNavigator> extends ChangeNotifier {
   N? navigator;

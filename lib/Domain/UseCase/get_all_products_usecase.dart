@@ -1,6 +1,6 @@
-import 'package:flutter_task_cycle_one/Data/Repository/GetAllProductsRepositoryImpl.dart';
-import 'package:flutter_task_cycle_one/Domain/Models/ProductResponse.dart';
-import 'package:flutter_task_cycle_one/Domain/Repository/GetAllProductsRepository.dart';
+import 'package:flutter_task_cycle_one/Data/Repository/get_all_products_repository_impl.dart';
+import 'package:flutter_task_cycle_one/Domain/Models/product_response.dart';
+import 'package:flutter_task_cycle_one/Domain/Repository/get_all_products_repository.dart';
 GetAllProductsUseCase injectGetAllProductsUseCase(){
   return GetAllProductsUseCase(repository: injectGetAllProductsRepository());
 }
@@ -11,7 +11,6 @@ class GetAllProductsUseCase {
 
   Future<List<ProductResponse>?> invoke() async{
     var response = await repository.getAllProducts();
-    print("2");
     return response;
   }
 }
